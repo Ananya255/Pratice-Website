@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaming One Page</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body class="dark-mode">
+
+  
+  <nav class="navbar navbar-expand-lg px-5 py-3">
+    <a class="navbar-brand text-white fw-bold" href="#">🎮 Gaming</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav d-flex flex-row gap-3 align-items-center">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item">
+          <button onclick="toggleMode()" class="btn btn-sm btn-pink">Toggle Dark/Light</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <section id="home" class="relative h-[80vh] overflow-hidden">
+    <img class="slide-img active" src="game.avif" />
+    <img class="slide-img" src="Logo.jpg" />
+    <img class="slide-img" src="keyboard.jpg" />
+    <img class="slide-img" src="console.jpg" />
+    <img class="slide-img" src="multi.jpg" />
+
+    <div class="absolute bottom-10 w-full text-center">
+      <a href="#about" class="btn btn-pink px-4 py-2">Welcome</a>
+    </div>
+  </section>
+
+  <div id="popup" class="popup-container position-fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center d-none">
+    <div class="popup-content bg-dark p-5 rounded position-relative">
+      <button id="close-popup" class="btn-close position-absolute top-0 end-0 m-2 text-white">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="gaming-img" src="gaming2.jpg" alt="Gaming PNG" class="popup-img w-48 h-48 mb-4">
+      <h2 id="popup-text" class="text-white text-2xl">Welcome to Gaming World!</h2>
+    </div>
+  </div>
+
+
+  <section id="about" class="text-center py-20">
+    <h2 class="text-4xl font-bold mb-6">About Gaming</h2>
+    <p class="text-lg mb-6">Gaming is more than just a hobby. It’s a lifestyle, a career, and a community. Dive into the
+      digital universe!</p>
+    <a href="showmore.html" class="btn btn-pink">Show More ⮕</a>
+  </section>
+
+
+
+<section id="cards" class="py-20 text-center bg-dark text-white">
+  <h2 class="text-3xl font-bold mb-10">Explore Games</h2>
+  <div class="container">
+    <div class="row g-4">
+      
+      <div class="col-md-4">
+        <div class="card-container">
+          <div class="card-flip">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="valo.jpg" class="card-img-top" alt="game">
+              </div>
+              <div class="card-back d-flex flex-column justify-content-center align-items-center p-3">
+                <h5 class="fw-bold">Valorant</h5>
+                <p class="mb-0">A tactical 5v5 character-based FPS by Riot Games.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="col-md-4">
+        <div class="card-container">
+          <div class="card-flip">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="ff.jpg" class="card-img-top" alt="game">
+              </div>
+              <div class="card-back d-flex flex-column justify-content-center align-items-center p-3">
+                <h5 class="fw-bold">Free Fire</h5>
+                <p class="mb-0">A fast-paced battle royale game popular on mobile.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ 
+      <div class="col-md-4">
+        <div class="card-container">
+          <div class="card-flip">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="amongus.jpg" class="card-img-top" alt="game">
+              </div>
+              <div class="card-back d-flex flex-column justify-content-center align-items-center p-3">
+                <h5 class="fw-bold">Among Us</h5>
+                <p class="mb-0">A social deduction game of teamwork and betrayal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="text-center py-20 bg-dark text-white">
+  <h2 class="text-4xl font-bold mb-6">Contact Us</h2>
+  <form class="max-w-md mx-auto space-y-4">
+    <input type="text" class="form-control" placeholder="Your Name">
+    <input type="email" class="form-control" placeholder="Your Email">
+    <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+    <button class="btn btn-pink mt-3">Send Message</button>
+  </form>
+</section>
+
+
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
